@@ -110,7 +110,11 @@ def network_ssh_loop(usernames: list, passwords: list):
                     break
         time.sleep(20)
 
+
 def ssh_wormhole(usernames:list, passwords:list):
     t = Thread(target=network_ssh_loop, args=(usernames, passwords))
     t.start()
     print("Wormhole: SSH successfully started")
+
+if __name__ == "__main__":
+    ssh_wormhole()
